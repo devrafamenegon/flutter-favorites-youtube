@@ -74,13 +74,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_youtube:
-    dependency: "direct main"
-    description:
-      name: flutter_youtube
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.2"
   http:
     dependency: "direct main"
     description:
@@ -198,6 +191,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0-nullsafety.3"
+  youtube_api_v3:
+    dependency: "direct main"
+    description:
+      name: youtube_api_v3
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.3"
 sdks:
   dart: ">=2.10.0-110 <2.11.0"
   flutter: ">=0.1.4 <2.0.0"
