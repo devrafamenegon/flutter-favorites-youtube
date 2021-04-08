@@ -25,7 +25,6 @@ class Home extends StatelessWidget {
             alignment: Alignment.center,
             child: StreamBuilder<Map<String, Video>>(
               stream: BlocProvider.of<FavoriteBloc>(context).outFav,
-              initialData: {},
               builder: (context, snapshot){
                 if(snapshot.hasData) return Text("${snapshot.data.length}");
                 else return Container();

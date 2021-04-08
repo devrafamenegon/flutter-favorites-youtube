@@ -2,13 +2,15 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter_favorites_youtube/models/video_model.dart';
+import 'package:rxdart/rxdart.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class FavoriteBloc implements BlocBase {
 
   Map<String, Video> _favorites = {};
 
-  final StreamController<Map<String, Video>> _favController = StreamController<Map<String, Video>>.broadcast();
+  //BehaviorSubject te manda o ultimo dado quando vc começar a observa-lo
+  final _favController = BehaviorSubject<Map<String, Video>>(seedValue: {});
   Stream<Map<String, Video>> get outFav => _favController.stream;
 
   FavoriteBloc(){
