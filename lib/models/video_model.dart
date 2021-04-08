@@ -9,12 +9,29 @@ class Video {
 
   //pega o json e faz um objeto com eles
   factory Video.fromJson(Map<String, dynamic> json){
-    return Video(
-      id: json["id"]["videoId"],
-      title: json["snippet"]["title"],
-      thumb: json["snippet"]["thumbnails"]["high"]["url"],
-      channel: json["snippet"]["channelTitle"],
-    );
+    if(json.containsKey("id"))
+      return Video(
+        id: json["id"]["videoId"],
+        title: json["snippet"]["title"],
+        thumb: json["snippet"]["thumbnails"]["high"]["url"],
+        channel: json["snippet"]["channelTitle"],
+      );
+    else
+      return Video(
+        id: json["id"],
+        title: json["title"],
+        thumb: json["thumb"],
+        channel: json["channel"]
+      );
+  }
+
+  Map<String, dynamic> toJson(){
+    return {
+      "videoId": id,
+      "title": title,
+      "thumb": thumb,
+      "channel": channel,
+    };
   }
 
 }
