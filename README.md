@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Youtube" src=".github/youtube_logo.png" width="120px">
+  <img alt="Youtube" src=".github/youtube-logo.png" width="120px">
 </p>
 
 ## 🧪 Technologies
